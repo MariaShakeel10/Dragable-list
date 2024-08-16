@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: white;
+    background-color: rgb(204, 0, 255);
+}
+h1 {
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: bolder;
+}
+ul> li {
+ list-style: none;
+}
+.main {
+    border: 2px solid white;
+
+}
+.btn-1 {
+    background-color:rgba(204, 0, 255, 0.774) !important;
+    color: white;
+}
+.red{
+    color: red;
+    border-color: white;
+}
+.green{
+        color: green;
+        border-color: white;
+        border: none;
+}
+#box {
+    border: none;
+}
