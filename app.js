@@ -9,7 +9,7 @@ function add() {
     <input type="checkbox" class="rounded" onclick="strikeThrough(event)">
     <input type="text" class="p-1" value="${inp.value}" disabled>
     <button class="red btn btn-light" onclick="remove(event)">X</button>
-    <button class="green" onclick="update(event)">↻</button>
+      <button class="green" onclick="update(event)">&#8635</button>
   `;
   li.setAttribute('draggable', 'true');
   li.setAttribute('id', 'card-' + Date.now()); // Assign a unique ID
