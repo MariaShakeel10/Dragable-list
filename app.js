@@ -9,7 +9,7 @@ function add() {
     <input type="checkbox" class="rounded" onclick="strikeThrough(event)">
     <input type="text" class="p-1" value="${inp.value}" disabled>
     <button class="red btn btn-light" onclick="remove(event)">X</button>
-    <button class="green" onclick="update(event)">&#8635</button>
+    <button class="green" onclick="update(event)">↻</button>
   `;
   li.setAttribute('draggable', 'true');
   li.setAttribute('id', 'card-' + Date.now()); // Assign a unique ID
@@ -64,9 +64,8 @@ function allowDrop(event) {
   event.preventDefault();
 }
 
-list.addEventListener('dragover', allowDrop);
-inProgress.addEventListener('dragover', allowDrop);
-done.addEventListener('dragover', allowDrop);
-list.addEventListener('drop', drop);
-inProgress.addEventListener('drop', drop);
-done.addEventListener('drop', drop);
+// Add these attributes 
+inProgress.setAttribute('ondrop', 'drop(event)');
+inProgress.setAttribute('ondragover', 'allowDrop(event)');
+done.setAttribute('ondrop', 'drop(event)');
+done.setAttribute('ondragover', 'allowDrop(event)');
